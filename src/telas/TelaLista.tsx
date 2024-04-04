@@ -1,6 +1,6 @@
 import { Avatar, Button, Icon, ListItem, Text } from "@rneui/base";
 import { FlatList,View } from "react-native";
-import dadosUsuario from "../dados/dadosUsuario";
+import DadosUsuario from '../dados/DadosUsuario'
 
 
 function getUsuarios({item}){
@@ -33,7 +33,7 @@ export default props =>{
         <View>
         <Text>TELA LISTAGEM</Text>
         <FlatList
-            data={dadosUsuario}
+            data={DadosUsuario}
             renderItem={getUsuarios}
         />
         </View>
