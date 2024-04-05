@@ -4,12 +4,15 @@ import TelaFormulario from './src/telas/TelaFormulario';
 import TelaLista from './src/telas/TelaLista';
 import { Button, Icon, Text} from "@rneui/base";
 
+import { UsuarioProvider } from './src/context/UsuarioContext';
+
 const Stack = createNativeStackNavigator();
 
 
 
 export default function App() {
   return (
+    <UsuarioProvider>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName='TelaList'
@@ -46,6 +49,7 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
+      </UsuarioProvider>
   );
 }
 
